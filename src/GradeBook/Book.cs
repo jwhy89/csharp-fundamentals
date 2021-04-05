@@ -34,12 +34,10 @@ namespace GradeBook
                 lowGrade = Math.Min(number, lowGrade);
                 result += number;
             }
-            Console.WriteLine($"Sum of grades: {result}");
 
-            Console.WriteLine($"How many numbers are in grades? {grades.Count}");
-            var average = 0.0;
-            average = result / grades.Count;
-            Console.WriteLine($"The average grade is {average:N1}.");
+            result /= grades.Count;
+            Console.WriteLine($"{this.name}");
+            Console.WriteLine($"The average grade is {result:N1}.");
             Console.WriteLine($"The highest grade is {highGrade}.");
             Console.WriteLine($"The lowest grade is {lowGrade}.");
         }
