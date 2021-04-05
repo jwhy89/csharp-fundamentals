@@ -4,10 +4,13 @@ namespace GradeBook
     class Book
     {
         // implicit constructor
-        public Book()
+        public Book(string name)
         {
             grades = new List<double>();
+            this.name = name;
         }
+
+        // this is an instance member/method of class Book
         public void AddGrade(double grade)
         {
             grades.Add(grade);
@@ -17,6 +20,7 @@ namespace GradeBook
         // List<double> grades = new List<double>();
 
         // field definition option 2
-        List<double> grades;
+        private List<double> grades;
+        private string name;
     }
 }
